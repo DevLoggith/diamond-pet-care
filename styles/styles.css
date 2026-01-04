@@ -17,24 +17,6 @@
 	--border-color: #e5e7eb;
 	--success-color: #10b981;
 
-	/* Typography */
-	--font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-		sans-serif;
-	--font-size-base: 16px;
-	--font-size-small: 14px;
-	--font-size-large: 18px;
-	--font-size-h1: 2.5rem;
-	--font-size-h2: 2rem;
-	--font-size-h3: 1.5rem;
-
-	/* Spacing */
-	--spacing-xs: 0.5rem;
-	--spacing-sm: 1rem;
-	--spacing-md: 1.5rem;
-	--spacing-lg: 2rem;
-	--spacing-xl: 3rem;
-	--spacing-xxl: 4rem;
-
 	/* Layout */
 	--container-width: 1200px;
 	--border-radius: 8px;
@@ -49,7 +31,7 @@
    GLOBAL STYLES
    ========================================== */
 body {
-	font-family: var(--font-family);
+	font-family: var(--font-family-base);
 	font-size: var(--font-size-base);
 	color: var(--text-color);
 	background-color: var(--background);
@@ -355,7 +337,7 @@ h3 {
 }
 
 /* Form Styles */
-.contact-form {
+#contactForm {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-md);
@@ -391,6 +373,7 @@ h3 {
 }
 
 .form-message {
+	text-align: center;
 	margin-top: var(--spacing-md);
 	padding: var(--spacing-md);
 	border-radius: var(--border-radius);
@@ -407,6 +390,10 @@ h3 {
 	display: block;
 	background-color: #fee2e2;
 	color: #991b1b;
+}
+
+.hidden {
+	display: none;
 }
 
 /* ==========================================
