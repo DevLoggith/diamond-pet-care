@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('navbar').innerHTML = `
         <div class="container">
             <div class="nav-brand">🐾 Diamond Pet Care</div>
-            <ul class="nav-links">
+            <ul class="nav-links list-unstyled">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
