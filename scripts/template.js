@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Insert header
+    // insert nav
     document.getElementById('navbar').innerHTML = `
         <div class="container">
             <div class="nav-brand">🐾 Diamond Pet Care</div>
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     `;
     
-    // Insert footer
+    // insert footer
     document.getElementById('footer').innerHTML = `
         <div class="container">
             <p>&copy; 2026 Diamond Pet Care</p>
