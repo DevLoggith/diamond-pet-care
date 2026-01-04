@@ -1,6 +1,22 @@
 // ==========================================
 // CONTACT FORM HANDLER
 // ==========================================
+// TODO: redo code for handling form submissions
+// TODO: create hamburger menu toggle for  mobile screens
+function showMessage(text, type) {
+    const formMessage = document.getElementById('formMessage');
+    formMessage.textContent = text;
+    formMessage.className = `form-message ${type}`;
+    
+    // Scroll to message
+    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    
+    // Hide message after 5 seconds
+    setTimeout(() => {
+        formMessage.classList = "";
+        formMessage.textContent = "";
+    }, 5000);
+}
 
 function handleFormSubmit() {
     // Get form values
@@ -9,9 +25,6 @@ function handleFormSubmit() {
     const phone = document.getElementById('phone').value.trim();
     const service = document.getElementById('service').value;
     const message = document.getElementById('message').value.trim();
-    
-    // Get message display element
-    const formMessage = document.getElementById('formMessage');
     
     // Basic validation
     if (!name || !email || !message) {
@@ -42,51 +55,6 @@ function handleFormSubmit() {
     // Clear form
     document.getElementById('contactForm').reset();
 }
-
-function showMessage(text, type) {
-    const formMessage = document.getElementById('formMessage');
-    formMessage.textContent = text;
-    formMessage.className = `form-message ${type}`;
-    
-    // Scroll to message
-    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    
-    // Hide message after 5 seconds
-    setTimeout(() => {
-        formMessage.style.display = 'none';
-    }, 5000);
-}
-
-// ==========================================
-// SMOOTH SCROLLING FOR ANCHOR LINKS
-// ==========================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Add smooth scrolling to all links with hash
-    const links = document.querySelectorAll('a[href^="#"]');
-    
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            // Check if it's an actual anchor (not just "#")
-            if (href !== '#' && href.length > 1) {
-                const target = document.querySelector(href);
-                
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        });
-    });
-    
-    // Add active state to current page in navigation
-    highlightCurrentPage();
-});
 
 // ==========================================
 // HIGHLIGHT CURRENT PAGE IN NAVIGATION

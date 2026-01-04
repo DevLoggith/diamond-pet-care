@@ -1,3 +1,5 @@
+// TODO: create brand graphic before brand text
+
 document.addEventListener('DOMContentLoaded', () => {
     // insert nav
     document.getElementById('navbar').innerHTML = `
