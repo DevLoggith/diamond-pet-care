@@ -58,6 +58,33 @@ h3 {
 }
 
 /* ==========================================
+   BUTTONS
+   ========================================== */
+.btn {
+	display: inline-block;
+	padding: var(--spacing-sm) var(--spacing-lg);
+	border-radius: var(--border-radius);
+	text-decoration: none;
+    text-align: center;
+	font-weight: 600;
+	transition: all var(--transition-speed);
+	cursor: pointer;
+	border: none;
+	font-size: var(--font-size-base);
+}
+
+.btn-primary {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+.btn-primary:hover {
+	background-color: var(--primary-dark);
+	transform: translateY(-2px);
+	box-shadow: var(--box-shadow-lg);
+}
+
+/* ==========================================
    NAVIGATION
    ========================================== */
 #navbar {
@@ -97,33 +124,6 @@ h3 {
 .nav-links a:hover,
 .nav-links a.active {
 	color: var(--primary-color);
-}
-
-/* ==========================================
-   BUTTONS
-   ========================================== */
-.btn {
-	display: inline-block;
-	padding: var(--spacing-sm) var(--spacing-lg);
-	border-radius: var(--border-radius);
-	text-decoration: none;
-    text-align: center;
-	font-weight: 600;
-	transition: all var(--transition-speed);
-	cursor: pointer;
-	border: none;
-	font-size: var(--font-size-base);
-}
-
-.btn-primary {
-	background-color: var(--primary-color);
-	color: white;
-}
-
-.btn-primary:hover {
-	background-color: var(--primary-dark);
-	transform: translateY(-2px);
-	box-shadow: var(--box-shadow-lg);
 }
 
 /* ==========================================
@@ -185,16 +185,6 @@ h3 {
 }
 
 /* ==========================================
-   PAGE HEADER
-   ========================================== */
-.page-header {
-	background-color: var(--background-alt);
-	padding: var(--spacing-xl) 0;
-	text-align: center;
-	border-bottom: 3px solid var(--primary-color);
-}
-
-/* ==========================================
    CONTENT SECTIONS
    ========================================== */
 .content-section {
@@ -204,10 +194,6 @@ h3 {
 .about-content {
 	max-width: 800px;
 	margin: 0 auto;
-}
-
-.why-heading {
-    margin-bottom: var(--spacing-md);
 }
 
 .about-content p {
