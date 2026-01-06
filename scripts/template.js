@@ -5,12 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('navbar').innerHTML = `
         <div class="container">
             <div class="nav-brand">🐾 Diamond Pet Care</div>
-            <ul class="nav-links list-unstyled">
+            <button id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="navMenu" class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div id="mobileOverlay"></div>
         </div>
     `;
     
