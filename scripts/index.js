@@ -1,3 +1,6 @@
+// Split JavaScript into logical modules based on functionality 
+// https://github.com/DevLoggith/diamond-pet-care/issues/5#issue-3786946763
+
 // ==========================================
 // HAMBURGER MENU
 // ==========================================
