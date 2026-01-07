@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 // CONTACT FORM HANDLER
 // ==========================================
-// TODO: redo code for handling form submissions
-// TODO: create hamburger menu toggle for  mobile screens
+// TODO: Redo code for handling form submissions
+// https://github.com/DevLoggith/diamond-pet-care/issues/2#issue-3786910496
 function showMessage(text, type) {
     const formMessage = document.getElementById('formMessage');
     formMessage.textContent = text;

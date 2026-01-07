@@ -3,8 +3,6 @@
    Change these values to easily update the entire site
    ========================================== */
 
-/* TODO: add in CSS reset in separate file, remove "global styles", include reset before main css */
-/* TODO: create hamburger menu for mobile devices */
 :root {
 	/* Colors */
 	--primary-color: #6366f1;
