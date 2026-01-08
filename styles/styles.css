@@ -96,7 +96,7 @@ p, li, label, strong {
 #navbar {
 	background-color: var(--background);
 	box-shadow: var(--box-shadow);
-	padding: var(--spacing-sm) 0;
+	padding: var(--spacing-md) 0;
 	position: sticky;
 	top: 0;
 	z-index: 100;
@@ -122,6 +122,7 @@ p, li, label, strong {
 .nav-links a {
 	text-decoration: none;
 	color: var(--text-color);
+	font-family: "Lora", var(--font-family-base);
 	font-size: var(--font-size-large);
 	font-weight: 700;
 	transition: color var(--transition-speed);
@@ -468,12 +469,16 @@ footer p {
         display: flex;
     }
 
+	#navbar {
+		padding: var(--spacing-sm) 0;
+	}
+
     #navMenu {
         position: fixed;
         top: var(--spacing-md);
         right: -100%;
         width: 60%;
-        max-width: 300px;
+        max-width: 200px;
         background-color: var(--background);
         flex-direction: column;
         gap: var(--spacing-xs);
@@ -484,7 +489,6 @@ footer p {
         transition: right var(--transition-speed);
         overflow-y: auto;
         margin-top: var(--spacing-xl);
-		font-family: "Inter", var(--font-family-base);
     }
 
     #navMenu.active {
@@ -494,32 +498,10 @@ footer p {
     #navMenu a {
         display: block;
         padding: var(--spacing-sm) 0;
-		font-weight: 500;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
+		font-size: 20px;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
     }
-
-    .service-grid,
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-
-	.hero h1 {
-		font-size: 2rem;
-	}
-
-	.contact-grid {
-		grid-template-columns: 1fr;
-	}
-
-	.service-grid,
-	.pricing-grid {
-		grid-template-columns: 1fr;
-	}
 }
