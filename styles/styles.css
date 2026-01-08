@@ -32,7 +32,7 @@
    GLOBAL STYLES
    ========================================== */
 body {
-	font-family: var(--font-family-base);
+	font-family: "Lora", var(--font-family-base);
 	font-size: var(--font-size-base);
 	color: var(--text-color);
 	background-color: var(--background);
@@ -58,6 +58,10 @@ h3 {
 	margin-bottom: var(--spacing-sm);
 }
 
+p, li, label, strong {
+	font-family: "inter", var(--font-family-base);
+}
+
 /* ==========================================
    BUTTONS
    ========================================== */
@@ -67,6 +71,7 @@ h3 {
 	border-radius: var(--border-radius);
 	text-decoration: none;
     text-align: center;
+	font-family: "inter", var(--font-family-base);
 	font-weight: 600;
 	transition: all var(--transition-speed);
 	cursor: pointer;
@@ -345,7 +350,7 @@ h3 {
 	padding: var(--spacing-sm);
 	border: 2px solid var(--border-color);
 	border-radius: var(--border-radius);
-	font-family: var(--font-family);
+	font-family: "Inter", var(--font-family-base);
 	font-size: var(--font-size-base);
 	transition: border-color var(--transition-speed);
 }
@@ -484,6 +489,7 @@ footer p {
         transition: right var(--transition-speed);
         overflow-y: auto;
         margin-top: var(--spacing-xl);
+		font-family: "Inter", var(--font-family-base);
     }
 
     #navMenu.active {
