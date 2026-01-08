@@ -96,7 +96,7 @@ p, li, label, strong {
 #navbar {
 	background-color: var(--background);
 	box-shadow: var(--box-shadow);
-	padding: var(--spacing-md) 0;
+	padding: var(--spacing-sm) 0;
 	position: sticky;
 	top: 0;
 	z-index: 100;
@@ -109,21 +109,21 @@ p, li, label, strong {
 }
 
 .nav-brand {
-	font-size: var(--font-size-large);
+	font-size: var(--font-size-h3);
 	font-weight: bold;
 	color: var(--primary-color);
 }
 
 .nav-links {
 	display: flex;
-	list-style: none;
 	gap: var(--spacing-lg);
 }
 
 .nav-links a {
 	text-decoration: none;
 	color: var(--text-color);
-	font-weight: 500;
+	font-size: var(--font-size-large);
+	font-weight: 700;
 	transition: color var(--transition-speed);
 }
 
@@ -141,7 +141,7 @@ p, li, label, strong {
 }
 
 .hero h1 {
-	font-size: 3rem;
+	font-size: var(--font-size-h1);
 }
 
 .hero-text {
@@ -340,7 +340,6 @@ p, li, label, strong {
 
 .form-group label {
 	margin-bottom: var(--spacing-xs);
-	font-weight: 600;
 	color: var(--text-color);
 }
 
@@ -461,10 +460,6 @@ footer p {
     position: relative;
 }
 
-#navMenu {
-    gap: var(--spacing-lg);
-}
-
 /* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
@@ -496,24 +491,10 @@ footer p {
         right: var(--spacing-md);
     }
 
-    #navMenu li {
-        margin: 0;
-    }
-
     #navMenu a {
         display: block;
         padding: var(--spacing-sm) 0;
-        font-size: var(--font-size-large);
-    }
-
-    #navbar .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .nav-links {
-        gap: var(--spacing-md);
+		font-weight: 500;
     }
 
     .hero h1 {
@@ -529,10 +510,6 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-	.nav-links {
-		gap: var(--spacing-md);
-	}
-
 	.hero h1 {
 		font-size: 2rem;
 	}
@@ -544,20 +521,5 @@ footer p {
 	.service-grid,
 	.pricing-grid {
 		grid-template-columns: 1fr;
-	}
-}
-
-@media (max-width: 480px) {
-	.nav-links {
-		flex-direction: column;
-		gap: var(--spacing-sm);
-	}
-
-	h1 {
-		font-size: 2rem;
-	}
-
-	h2 {
-		font-size: 1.5rem;
 	}
 }
