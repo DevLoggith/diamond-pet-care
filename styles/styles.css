@@ -12,8 +12,12 @@
 	--text-light: #6b7280;
 	--background: #ffffff;
 	--background-alt: #f9fafb;
-	--border-color: #e5e7eb;
-	--success-color: #10b981;
+	--border-color: #e9edca;
+	--checkmark-color: #10b981;
+	--success-color: #065f46;
+	--success-background-color: #d1fae5; 
+	--error-color: #991b1b;
+	--error-background-color: #fee2e2;
 
 	/* Layout */
 	--container-width: 1200px;
@@ -213,7 +217,7 @@ h3 {
 	content: "✓";
 	position: absolute;
 	left: 0;
-	color: var(--success-color);
+	color: var(--checkmark-color);
 	font-weight: bold;
 }
 
@@ -366,14 +370,14 @@ h3 {
 
 .form-message.success {
 	display: block;
-	background-color: #d1fae5;
-	color: #065f46;
+	background-color: var(--success-background-color);
+	color: var(--success-color);
 }
 
 .form-message.error {
 	display: block;
-	background-color: #fee2e2;
-	color: #991b1b;
+	background-color: var(--error-background-color);
+	color: var(--error-color);
 }
 
 .hidden {
