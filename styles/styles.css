@@ -457,16 +457,17 @@ footer p {
 		visibility: visible;
 		opacity: 1;
 		pointer-events: auto;
+		backdrop-filter: blur(3px);
 	}
 
 	#navbar {
 		padding: var(--spacing-sm) 0;
 	}
 
-    #navMenu {
+        #navMenu {
         position: fixed;
         top: var(--spacing-md);
-        right: -100%;
+        right: 0;
         width: 60%;
         max-width: 200px;
         background-color: var(--background);
@@ -476,13 +477,14 @@ footer p {
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow-lg);
         z-index: 100;
-        transition: right var(--transition-speed);
+        transition: transform var(--transition-speed);
         overflow-y: auto;
         margin-top: var(--spacing-xl);
+        transform: translateX(100%);
     }
 
     #navMenu.active {
-        right: var(--spacing-md);
+        transform: translateX(calc(var(--spacing-md) * -1));
     }
 
     #navMenu a {
