@@ -8,7 +8,6 @@
 	--primary-color: #8b7fa8;
 	--primary-dark: #6f6487;
 	--text-color: #949f6e;
-	--text-light: #ccd5ae;
 	--background: #fdfae0;
 	--background-alt: #faedcd;
 	--border-color: #e9edca;
@@ -260,7 +259,7 @@ p, li, label, strong {
 
 .badge {
 	position: absolute;
-	top: -12px;
+	top: -18px;
 	left: 50%;
 	transform: translateX(-50%);
 	background-color: var(--primary-color);
@@ -279,12 +278,11 @@ p, li, label, strong {
 }
 
 .price-period {
-	color: var(--text-light);
 	margin-bottom: var(--spacing-lg);
 }
 
 .pricing-features {
-	margin: var(--spacing-lg) 0;
+	margin-bottom: var(--spacing-lg);
 	text-align: center;
 }
 
