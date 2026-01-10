@@ -196,7 +196,7 @@ p, li, label, strong {
    CONTENT SECTIONS
    ========================================== */
 .content-section {
-	padding: var(--spacing-xxl) 0;
+	padding: var(--spacing-xl) 0;
 }
 
 .about-content {
@@ -319,14 +319,14 @@ p, li, label, strong {
 	margin-bottom: var(--spacing-lg);
 }
 
+.service-areas-list {
+	display: grid;
+	grid-template-columns: 8rem 8rem;
+}
+
 .contact-item strong {
 	display: block;
 	color: var(--primary-color);
-}
-
-.contact-item p {
-	margin: 0;
-	color: var(--text-light);
 }
 
 /* Form Styles */
@@ -493,5 +493,6 @@ footer p {
 
     .contact-grid {
         grid-template-columns: 1fr;
+		gap: var(--spacing-xs);
     }
 }
