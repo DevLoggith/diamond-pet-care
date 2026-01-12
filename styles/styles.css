@@ -292,13 +292,13 @@ strong {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: var(--spacing-md);
-	margin-bottom: var(--spacing-lg);
 }
 
 .pricing-column {
 	background: var(--background-alt);
 	border-radius: calc(var(--border-radius) * 0.75);
 	padding: var(--spacing-md);
+	margin-bottom: var(--spacing-lg);
 }
 
 .column-header {
@@ -387,6 +387,12 @@ strong {
 	font-weight: bold;
 	display: inline-block;
 	width: clamp(81px, 150px, 200px);
+}
+
+.pet-types-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
 }
 
 /* ==========================================
@@ -493,6 +499,13 @@ footer p {
 /* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
+
+@media (min-width: 1090px) {
+	.pet-types-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
 @media (max-width: 768px) {
 	#hamburger {
 		display: flex;
@@ -578,9 +591,9 @@ footer p {
 		font-size: 20px;
 	}
 
-	/* .pricing-grid {
+	.pricing-grid {
 		grid-template-columns: 1fr;
-	} */
+	}
 
 	.contact-grid {
 		grid-template-columns: 1fr;
