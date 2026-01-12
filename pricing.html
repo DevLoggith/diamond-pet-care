@@ -4,10 +4,16 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Diamond Pet Care - Pricing</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="styles/reset-2025.css" />
 		<link rel="stylesheet" href="styles/styles.css" />
 	</head>
@@ -15,56 +21,127 @@
 		<nav id="navbar"></nav>
 
 		<main>
-			<!-- TODO: fix spacing on pricing cards on mobile
-			 https://github.com/DevLoggith/diamond-pet-care/issues/4#issue-3786923056 -->
 			<section class="content-section">
 				<div class="container">
 					<div class="pricing-grid">
-						<div class="pricing-card">
-							<h3>Dog Walking</h3>
-							<div class="price">$25</div>
-							<p class="price-period">per 30-minute walk</p>
-							<ul class="pricing-features">
-								<li>Individual or group walks</li>
-								<li>Fresh water provided</li>
-								<li>Photo updates</li>
-								<li>Flexible scheduling</li>
-							</ul>
-							<a href="contact.html" class="btn btn-primary">Book Now</a>
-						</div>
-
+						<!-- Dog Walking Card -->
 						<div class="pricing-card featured">
 							<div class="badge">Popular</div>
-							<h3>Extended Walk</h3>
-							<div class="price">$40</div>
-							<p class="price-period">per 60-minute walk</p>
-							<ul class="pricing-features">
-								<li>Longer adventure time</li>
-								<li>Perfect for high-energy dogs</li>
-								<li>Fresh water provided</li>
-								<li>Photo updates</li>
-							</ul>
-							<a href="contact.html" class="btn btn-primary">Book Now</a>
+							<h3>Dog Walking</h3>
+
+							<div class="pricing-columns">
+								<div class="pricing-column">
+									<div class="column-header regular-header">Regular Rates</div>
+									<div class="price-item">
+										<div class="service-name">30 minute walk</div>
+										<div class="price">$30</div>
+									</div>
+									<div class="price-item">
+										<div class="service-name">1 hour walk</div>
+										<div class="price">$50</div>
+									</div>
+								</div>
+
+								<div class="pricing-column holiday">
+									<div class="column-header holiday-header">Holiday Rates</div>
+									<div class="price-item">
+										<div class="service-name">30 minute walk</div>
+										<div class="price">$40</div>
+									</div>
+									<div class="price-item">
+										<div class="service-name">1 hour walk</div>
+										<div class="price">$65</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="addon-section">
+								<div class="addon-header">Add-Ons</div>
+								<div class="price-item">
+									<div class="service-name">Each additional dog</div>
+									<div class="price">$15</div>
+								</div>
+							</div>
 						</div>
 
+						<!-- Pet Sitting Card -->
 						<div class="pricing-card">
 							<h3>Pet Sitting</h3>
-							<div class="price">$50</div>
-							<p class="price-period">per visit</p>
-							<ul class="pricing-features">
-								<li>30-45 minute visits</li>
-								<li>Feeding and medication</li>
-								<li>Playtime and attention</li>
-								<li>Daily photo updates</li>
-							</ul>
-							<a href="contact.html" class="btn btn-primary">Book Now</a>
+
+							<div class="category-label-container">
+								<span class="category-label">Dogs</span>
+							</div>
+
+							<div class="pricing-columns">
+								<div class="pricing-column">
+									<div class="column-header regular-header">Regular Rates</div>
+									<div class="price-item">
+										<div class="service-name">Per night</div>
+										<div class="price">$65</div>
+									</div>
+									<div class="price-item">
+										<div class="service-name">Puppy rate</div>
+										<div class="price">$70</div>
+									</div>
+								</div>
+
+								<div class="pricing-column holiday">
+									<div class="column-header holiday-header">Holiday Rates</div>
+									<div class="price-item">
+										<div class="service-name">Per night</div>
+										<div class="price">$75</div>
+									</div>
+									<div class="price-item">
+										<div class="service-name">Puppy rate</div>
+										<div class="price">$80</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="addon-section">
+								<div class="addon-header">Add-Ons</div>
+								<div class="pricing-columns">
+									<div class="price-item">
+										<div class="service-name">Additional dog (regular)</div>
+										<div class="price">$30</div>
+									</div>
+									<div class="price-item">
+										<div class="service-name">Additional dog (holiday)</div>
+										<div class="price">$35</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="category-section cats">
+								<div class="category-label-container">
+									<span class="category-label">Cats</span>
+								</div>
+
+								<div class="single-column-pricing">
+									<div class="pricing-column">
+										<div class="price-item">
+											<div class="service-name">Per night</div>
+											<div class="price">$40</div>
+										</div>
+									</div>
+									<div class="addon-section">
+										<div class="addon-header">Add-Ons</div>
+										<div class="price-item">
+											<div class="service-name">Each additional cat</div>
+											<div class="price">$15</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 
 					<div class="pricing-note">
 						<p>
-							<strong>Note:</strong> Package deals and weekly rates available. Contact
-							us for custom pricing for multiple pets or extended care.
+							<strong>Note:</strong> All rates are subject to availability. Holiday
+							rates apply to major holidays including New Year's Day, Memorial Day,
+							Independence Day, Labor Day, Thanksgiving, and Christmas. Contact us for
+							custom pricing for multiple pets or extended care.
 						</p>
 					</div>
 				</div>
