@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
 function showMessage(text, type) {
     const formMessage = document.getElementById('formMessage');
     formMessage.textContent = text;
-    formMessage.className = `form-message ${type}`;
+    formMessage.classList.add(type);
     
     // Scroll to message
     formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     
     // Hide message after 5 seconds
     setTimeout(() => {
-        formMessage.classList = "";
+        formMessage.classList.remove(type);
         formMessage.textContent = "";
     }, 5000);
 }
@@ -34,7 +34,7 @@ function handleFormSubmit(event) {
     
     // Basic validation
     if (!name || !email || !message) {
-        showMessage('Please fill in all required fields.', 'error');
+        showMessage('Please fill in all required fields indicated with a "*"', 'error');
         return;
     }
     
@@ -44,9 +44,16 @@ function handleFormSubmit(event) {
         showMessage('Please enter a valid email address.', 'error');
         return;
     }
+
+     // Phone number validation
+    const phoneRegex = /^[2-9]{1}[0-9]{9}$/
+    if (phone && !phoneRegex.test(phone)) {
+        showMessage('Please enter a phone number with the format "2345678901"', 'error');
+        return;
+    }
     
     // Simulate form submission
-    // In a real application, you would send this data to a server
+    // In production send via web3 forms
     console.log('Form submitted with data:', {
         name,
         email,
