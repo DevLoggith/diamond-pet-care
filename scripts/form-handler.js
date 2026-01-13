@@ -1,5 +1,12 @@
 // TODO: Redo code for handling form submissions
 // https://github.com/DevLoggith/diamond-pet-care/issues/2#issue-3786910496
+
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', handleFormSubmit);
+});
+
 function showMessage(text, type) {
     const formMessage = document.getElementById('formMessage');
     formMessage.textContent = text;
@@ -15,7 +22,9 @@ function showMessage(text, type) {
     }, 5000);
 }
 
-function handleFormSubmit() {
+function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
     // Get form values
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -50,5 +59,5 @@ function handleFormSubmit() {
     showMessage('Thank you for your message! We\'ll get back to you soon.', 'success');
     
     // Clear form
-    document.getElementById('contactForm').reset();
+    form.reset();
 }
