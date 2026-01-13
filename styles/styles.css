@@ -458,6 +458,7 @@ strong {
 }
 
 .form-message {
+	font-family: "Inter", var(--font-family-base);
 	text-align: center;
 	margin-top: var(--spacing-md);
 	padding: var(--spacing-md);
