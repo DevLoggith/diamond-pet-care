@@ -59,11 +59,10 @@
 								</div>
 							</div>
 						</div>
-						<!-- TODO: Redo code for handling form submissions
-						 https://github.com/DevLoggith/diamond-pet-care/issues/2#issue-3786910496 -->
-						<div class="contact-form-wrapper">
+						<div class="contact-form">
 							<h2>Send a Message</h2>
-							<form id="contactForm" novalidate>
+							<form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+								<input type="hidden" name="access_key" value="96d06aa1-2f54-448f-baca-9f31face8100">
 								<div class="form-group">
 									<label for="name">Name*</label>
 									<input type="text" id="name" name="name" required />
@@ -91,6 +90,7 @@
 										id="message"
 										name="message"
 										rows="5"
+										spellcheck="true"
 										required
 									></textarea>
 								</div>
