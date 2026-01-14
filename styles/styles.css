@@ -457,7 +457,7 @@ strong {
 	border-color: var(--primary-color);
 }
 
-.form-message {
+#formAlert {
 	font-family: "Inter", var(--font-family-base);
 	text-align: center;
 	margin-top: var(--spacing-md);
@@ -466,13 +466,13 @@ strong {
 	display: none;
 }
 
-.form-message.success {
+#formAlert.success {
 	display: block;
 	background-color: var(--success-background-color);
 	color: var(--success-color);
 }
 
-.form-message.error {
+#formAlert.error {
 	display: block;
 	background-color: var(--error-background-color);
 	color: var(--error-color);

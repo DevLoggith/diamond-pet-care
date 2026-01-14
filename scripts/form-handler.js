@@ -8,17 +8,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function showMessage(text, type) {
-    const formMessage = document.getElementById('formMessage');
-    formMessage.textContent = text;
-    formMessage.classList.add(type);
+    const formAlert = document.getElementById('formAlert');
+    formAlert.textContent = text;
+    formAlert.classList.add(type);
     
     // Scroll to message
-    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     
     // Hide message after 5 seconds
     setTimeout(() => {
-        formMessage.classList.remove(type);
-        formMessage.textContent = "";
+        formAlert.classList.remove(type);
+        formAlert.textContent = "";
     }, 5000);
 }
 
