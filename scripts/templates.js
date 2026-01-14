@@ -1,9 +1,9 @@
 // TODO: Find/create brand graphic to go with brand text
 // https://github.com/DevLoggith/diamond-pet-care/issues/3#issue-3786914746
 
-document.addEventListener('DOMContentLoaded', () => {
-    // insert nav
-    document.getElementById('navbar').innerHTML = `
+document.addEventListener("DOMContentLoaded", () => {
+	// insert nav
+	document.getElementById("navbar").innerHTML = `
         <div class="container">
             <div class="nav-brand">🐾 Diamond Pet Care</div>
             <button id="hamburger" aria-label="Toggle menu">
@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <div id="mobileOverlay"></div>
         </div>
     `;
-    
-    // insert footer
-    document.getElementById('footer').innerHTML = `
+
+	// insert footer
+	document.getElementById("footer").innerHTML = `
         <div class="container">
             <p>&copy; 2026 Diamond Pet Care</p>
         </div>
