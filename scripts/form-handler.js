@@ -1,6 +1,3 @@
-// TODO: Redo code for handling form submissions
-// https://github.com/DevLoggith/diamond-pet-care/issues/2#issue-3786910496
-
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
@@ -22,14 +19,17 @@ function showMessage(text, type) {
     }, 5000);
 }
 
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
     event.preventDefault();
     const form = event.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const formData = new FormData(form);
+    formData.append("access_key", "96d06aa1-2f54-448f-baca-9f31face8100");
+
     // Get form values
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone').value.trim();
-    const service = document.getElementById('service').value;
     const message = document.getElementById('message').value.trim();
     
     // Basic validation
@@ -51,19 +51,33 @@ function handleFormSubmit(event) {
         showMessage('Please enter a phone number with the format "2345678901"', 'error');
         return;
     }
-    
-    // Simulate form submission
-    // In production send via web3 forms
-    console.log('Form submitted with data:', {
-        name,
-        email,
-        phone,
-        service,
-        message
-    });
-    
-    // Show success message
-    showMessage('Thank you for your message! We\'ll get back to you soon.', 'success');
+
+    // form submission w/web3 forms
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            showMessage('Thank you for your message! I\'ll get back to you soon.', 'success');
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
     
     // Clear form
     form.reset();
