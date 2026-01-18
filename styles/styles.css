@@ -501,12 +501,6 @@ footer p {
    RESPONSIVE DESIGN
    ========================================== */
 
-@media (min-width: 1090px) {
-	.pet-types-grid {
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
 @media (max-width: 768px) {
 	#hamburger {
 		display: flex;
