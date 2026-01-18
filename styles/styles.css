@@ -64,6 +64,11 @@ strong {
 	font-family: "inter", var(--font-family-base);
 }
 
+a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
 /* ==========================================
    BUTTONS
    ========================================== */
@@ -122,8 +127,6 @@ strong {
 }
 
 .nav-links a {
-	text-decoration: none;
-	color: var(--text-color);
 	font-family: "Lora", var(--font-family-base);
 	font-size: var(--font-size-large);
 	font-weight: 700;
@@ -252,11 +255,6 @@ strong {
 .pricing-card h3 {
 	margin-bottom: var(--spacing-md);
 	text-align: center;
-}
-
-.pricing-card:hover {
-	transform: translateY(-5px);
-	box-shadow: var(--box-shadow-lg);
 }
 
 .pricing-card.featured {
