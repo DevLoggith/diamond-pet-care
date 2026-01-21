@@ -286,6 +286,11 @@ a {
 	margin-bottom: 0;
 }
 
+.pricing-note a {
+	text-decoration: underline;
+	color: var(--primary-color);
+}
+
 .pricing-columns {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
