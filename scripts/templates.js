@@ -24,7 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	// insert footer
 	document.getElementById("footer").innerHTML = `
         <div class="container">
-            <p>&copy; 2026 Diamond Pet Care</p>
+            <p>2026 Diamond Pet Care</p>
+            <p class="dev-info">
+                <a href="https://github.com/DevLoggith/diamond-pet-care">Website</a> 
+                created by 
+                <a href="https://www.linkedin.com/in/logan-miklosovic/">Logan Miklosovic</a>
+            </p>
         </div>
     `;
 });
