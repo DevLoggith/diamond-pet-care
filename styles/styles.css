@@ -188,13 +188,12 @@ a {
 	transition: transform var(--transition-speed);
 }
 
-.service-card:hover {
-	transform: translateY(-5px);
-	box-shadow: var(--box-shadow-lg);
-}
-
 .service-icon {
 	font-size: 3rem;
+	margin-bottom: var(--spacing-md);
+}
+
+.service-card p {
 	margin-bottom: var(--spacing-md);
 }
 
@@ -244,6 +243,7 @@ a {
 }
 
 .pricing-card {
+	scroll-margin-top: 90px;
 	background: var(--background);
 	border: 2px solid var(--border-color);
 	border-radius: var(--border-radius);
