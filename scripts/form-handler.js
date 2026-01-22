@@ -19,39 +19,37 @@ function showMessage(text, type) {
 	}, 5000);
 }
 
-async function handleFormSubmit(event) {
-	event.preventDefault();
-	const form = event.target;
-	const submitBtn = form.querySelector('button[type="submit"]');
-	const formData = new FormData(form);
-	formData.append("access_key", "96d06aa1-2f54-448f-baca-9f31face8100");
+function validateEmail(email) {
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	return emailRegex.test(email);
+}
 
-	// Get form values
-	const name = document.getElementById("name").value.trim();
-	const email = document.getElementById("email").value.trim();
-	const phone = document.getElementById("phone").value.trim();
-	const message = document.getElementById("message").value.trim();
+function validatePhoneNumber(phone) {
+	if (!phone) return true;
+	const phoneRegex = /^[2-9]{1}[0-9]{9}$/;
+	return phoneRegex.test(phone);
+}
 
-	// Basic validation
+function validateForm(name, email, phone, message) {
 	if (!name || !email || !message) {
 		showMessage('Please fill in all required fields indicated with a "*"', "error");
-		return;
+		return false;
 	}
 
-	// Email validation
-	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-	if (!emailRegex.test(email)) {
-		showMessage("Please enter a valid email address.", "error");
-		return;
+	if (!validateEmail(email)) {
+		showMessage("Please enter a valid email address", "error");
+		return false;
 	}
 
-	// Phone number validation
-	const phoneRegex = /^[2-9]{1}[0-9]{9}$/;
-	if (phone && !phoneRegex.test(phone)) {
-		showMessage('Please enter a phone number with the format "2345678901"', "error");
-		return;
+	if (!validatePhoneNumber(phone)) {
+		showMessage('Please enter a phone number with the format "2345678901"', "error", "");
+		return false;
 	}
 
+	return true;
+}
+
+async function submitForm(formData, submitBtn) {
 	// form submission w/web3 forms
 	const originalText = submitBtn.textContent;
 	submitBtn.textContent = "Sending...";
@@ -67,17 +65,41 @@ async function handleFormSubmit(event) {
 
 		if (response.ok) {
 			showMessage("Thank you for your message! I'll get back to you soon.", "success");
-			form.reset();
+			return true;
 		} else {
-			alert("Error: " + data.message);
+			showMessage("Error: " + data.message, "error");
+			return false;
 		}
 	} catch (error) {
-		alert("Something went wrong. Please try again.");
+		showMessage("Something went wrong. Please try again.", "error");
+		return false;
 	} finally {
 		submitBtn.textContent = originalText;
 		submitBtn.disabled = false;
 	}
+}
 
-	// Clear form
-	form.reset();
+async function handleFormSubmit(event) {
+	event.preventDefault();
+	const form = event.target;
+	const submitBtn = form.querySelector('button[type="submit"]');
+
+	// Get & sanitize form values
+	const name = document.getElementById("name").value.trim();
+	const email = document.getElementById("email").value.trim();
+	const phone = document.getElementById("phone").value.trim();
+	const message = document.getElementById("message").value.trim();
+
+	if (!validateForm(name, email, phone, message)) {
+		return;
+	}
+
+	const formData = new FormData(form);
+	formData.append("access_key", "96d06aa1-2f54-448f-baca-9f31face8100");
+
+	const success = await submitForm(formData, submitBtn);
+
+	if (success) {
+		form.reset();
+	}
 }
