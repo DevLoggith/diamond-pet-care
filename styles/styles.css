@@ -103,7 +103,7 @@ a {
 #navbar {
 	background-color: var(--background);
 	box-shadow: var(--box-shadow);
-	padding: var(--spacing-md) 0;
+	padding: var(--spacing-sm) 0;
 	position: sticky;
 	top: 0;
 	z-index: 100;
@@ -116,15 +116,12 @@ a {
 }
 
 .brand-img {
-	display: inline-block;
-	width: 35px;
-	transform: rotate(-25deg);
-	filter: opacity(74%);
+	width: 55px;
 }
 
 .nav-brand {
 	display: flex;
-	gap: 6px;
+	gap: 5px;
 	align-items: center;
 	font-size: var(--font-size-h3);
 	font-weight: bold;
@@ -577,10 +574,6 @@ footer a {
 		backdrop-filter: blur(3px);
 	}
 
-	#navbar {
-		padding: var(--spacing-sm) 0;
-	}
-
 	#navMenu {
 		position: fixed;
 		top: var(--spacing-md);
@@ -608,6 +601,14 @@ footer a {
 		display: block;
 		padding: var(--spacing-sm) 0;
 		font-size: 20px;
+	}
+
+	.nav-brand {
+		gap: 0;
+	}
+
+	.brand-img {
+		width:45px;
 	}
 
 	.pricing-grid {

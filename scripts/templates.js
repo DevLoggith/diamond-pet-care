@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.getElementById("navbar").innerHTML = `
         <div class="container">
             <div class="nav-brand">
-                    <img class="brand-img" src="./assets/paw-print.svg" /> 
+                    <img class="brand-img" src="./assets/cat-&-dog.webp" /> 
                     Diamond Pet Care
             </div>
             <button id="hamburger" aria-label="Toggle menu">
