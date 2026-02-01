@@ -115,7 +115,17 @@ a {
 	align-items: center;
 }
 
+.brand-img {
+	display: inline-block;
+	width: 35px;
+	transform: rotate(-25deg);
+	filter: opacity(74%);
+}
+
 .nav-brand {
+	display: flex;
+	gap: 6px;
+	align-items: center;
 	font-size: var(--font-size-h3);
 	font-weight: bold;
 	color: var(--primary-color);

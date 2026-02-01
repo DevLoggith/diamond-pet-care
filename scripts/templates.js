@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	// insert nav
 	document.getElementById("navbar").innerHTML = `
         <div class="container">
-            <div class="nav-brand">🐾 Diamond Pet Care</div>
+            <div class="nav-brand">
+                    <img class="brand-img" src="/assets/paw-print.svg" /> 
+                    Diamond Pet Care
+            </div>
             <button id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
