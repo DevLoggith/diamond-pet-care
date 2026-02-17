@@ -5,6 +5,7 @@
 
 :root {
 	/* Colors */
+	/* Light mode (default) */
 	--primary-color: #8b7fa8;
 	--primary-dark: #6f6487;
 	--text-color: #949f6e;
@@ -25,6 +26,16 @@
 
 	/* Transitions */
 	--transition-speed: 0.3s;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+	--primary-color: #a99dbf;
+	--primary-dark: #c4b8d6;
+	--text-color: #b0ba8a;
+	--background: #1e1c22;
+	--background-alt: #27222d;
+	--border-color: #3d4230;
 }
 
 /* ==========================================
@@ -519,6 +530,35 @@ footer a {
 /* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-color: #a99dbf;
+		--primary-dark: #c4b8d6;
+		--text-color: #b0ba8a;
+		--background: #1e1c22;
+		--background-alt: #27222d;
+		--border-color: #3d4230;
+	}
+
+	.form-group input,
+	.form-group select,
+	.form-group textarea {
+		background-color: #27222d;
+	}
+
+	.btn-primary, .badge, .category-label {
+		background-color: #6f6487;
+	}
+
+	.btn-primary:hover {
+		background-color: #8b7fa8;
+	}
+
+	footer {
+		background-color: #676f4d;
+	}
+}
 
 @media (max-width: 768px) {
 	#hamburger {
