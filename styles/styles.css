@@ -18,6 +18,9 @@
 	--error-color: #991b1b;
 	--error-background-color: #fee2e2;
 
+	/* RGB values for nav backdrop effects */
+    --background-rgb: 249, 244, 241;
+
 	/* Layout */
 	--container-width: 1200px;
 	--border-radius: 8px;
@@ -36,6 +39,9 @@
 	--background: #1e1c22;
 	--background-alt: #27222d;
 	--border-color: #3d4230;
+
+	/* RGB values for dark mode nav backdrop */
+    --background-rgb: 30, 28, 34;
 }
 
 /* ==========================================
@@ -112,12 +118,20 @@ a {
    NAVIGATION
    ========================================== */
 #navbar {
-	background-color: var(--background);
 	box-shadow: var(--box-shadow);
 	padding: var(--spacing-sm) 0;
 	position: sticky;
 	top: 0;
 	z-index: 100;
+}
+
+#navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(var(--background-rgb), 0.8);
+    backdrop-filter: blur(5px);
+    z-index: -1; /* sits behind navbar content */
 }
 
 #navbar .container {
@@ -539,6 +553,9 @@ footer a {
 		--background: #1e1c22;
 		--background-alt: #27222d;
 		--border-color: #3d4230;
+		
+		/* RGB values for dark mode backdrop */
+    	--background-rgb: 30, 28, 34;
 	}
 
 	.form-group input,
