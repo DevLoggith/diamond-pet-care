@@ -1,6 +1,3 @@
-// TODO: Find/create brand graphic to go with brand text
-// https://github.com/DevLoggith/diamond-pet-care/issues/3#issue-3786914746
-
 document.addEventListener("DOMContentLoaded", () => {
 	// insert nav
 	document.getElementById("navbar").innerHTML = `
