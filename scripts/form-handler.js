@@ -67,11 +67,13 @@ async function submitForm(formData, submitBtn) {
 			showMessage("Thank you for your message! I'll get back to you soon.", "success");
 			return true;
 		} else {
-			showMessage("Error: " + data.message, "error");
+			showMessage("Something went wrong. Please try again.", "error");
+			console.error("Error: " + data.message);
 			return false;
 		}
 	} catch (error) {
 		showMessage("Something went wrong. Please try again.", "error");
+		console.error("Error: " + data.message);
 		return false;
 	} finally {
 		submitBtn.textContent = originalText;
